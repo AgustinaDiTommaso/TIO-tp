@@ -1,7 +1,7 @@
 <?php
 
 class MovieView{
-    
+
     public function renderMoviesByGenre($genre, $movies){
         echo "<h1>Lista por género: $genre</h2>";
         echo "<a href='index.html'> Volver </a>";
@@ -28,5 +28,7 @@ class MovieView{
         }
         echo " </tbody>    
             </table>";
+        
+        echo "<footer>Movies Page 2021</footer>";
     }
 }
