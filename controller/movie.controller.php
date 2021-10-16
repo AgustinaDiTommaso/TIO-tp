@@ -1,6 +1,6 @@
 <?php
 require_once 'model/movie.model.php';
-//require_once 'app/MovieView.php';
+require_once 'view/movie.view.php';
 
 class MovieController {
 
@@ -8,15 +8,15 @@ class MovieController {
     private $view;
 
     public function __construct() {
-        $this->model = new TaskModel();
-        //$this->view = new MovieView();
+
+        $this->model = new MovieModel();
+        $this->view = new MovieView();
     }
 
     function showMoviesByGenre() {
 
         // verifica datos obligatorios
         if (!isset($_GET['genre']) || empty($_GET['genre'])) {
-            $this->view->renderError();
             return;
         }
 
@@ -32,9 +32,7 @@ class MovieController {
 
     function showHome() {
 
-
-        // actualizo la vista
-        //$this->view->renderMovies($movies);
+        header("Location: " . BASE_URL);
     }
 
 }

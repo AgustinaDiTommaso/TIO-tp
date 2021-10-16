@@ -1,6 +1,6 @@
 <?php
 
-class TaskModel{
+class MovieModel{
     private $db;
     
     public function __construct(){
